@@ -1,0 +1,36 @@
+﻿{
+  "configurations": [
+    {
+      "name": "x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "msvc_x64_x64" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": ""
+    },
+    {
+      "name": "Linux-GCC-Debug-2",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "cmakeExecutable": "cmake",
+      "remoteCopySourcesExclusionList": [ ".vs", ".git", "out", "build", "CtrlTF", "squish", "TestFiles", "TestProj", "WinCC_OA_Test_TEST-NODE-2", "WinCC_OA_Test_TEST-NODE-3", "WinCC_OA_Test_TEST-NODE-4", "WinCC_OA_Test/_TEST-RHEL-2" ],
+      "cmakeCommandArgs": "--trace-expand",
+      "remotePrebuildCommand": "cmake -DCMAKE_INSTALL_PREFIX=$OAINST",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "remotePostbuildCommand": "cd $HOME/.vs/${projectDirName}/${workspaceHash}/out/build/${name}/AddOns/NodeJs && cmake --install . --prefix /opt/WinCC_OA/3.20/",
+      "inheritEnvironments": [ "linux_x64" ],
+      "remoteMachineName": "${defaultRemoteMachineName}",
+      "remoteCMakeListsRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/src",
+      "remoteBuildRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/build/${name}",
+      "remoteInstallRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/install/${name}",
+      "remoteCopySources": true,
+      "rsyncCommandArgs": "-t --delete",
+      "remoteCopyBuildOutput": false,
+      "remoteCopySourcesMethod": "rsync"
+    }
+  ]
+}

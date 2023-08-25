@@ -1,0 +1,22 @@
+{
+  "ActiveTargetSystem": "localhost",
+  "DevContainersInfoBarHidden": true,
+  "OutputFoldersPerTargetSystem": {
+    "Local Machine": [
+      "out\\build\\x64-Debug",
+      "out\\install\\x64-Debug",
+      "out\\build\\Linux-GCC-Debug-2",
+      "out\\install\\Linux-GCC-Debug-2"
+    ],
+    "localhost": [
+      "out\\build\\x64-Debug",
+      "out\\install\\x64-Debug",
+      "out\\build\\Linux-GCC-Debug-2",
+      "out\\install\\Linux-GCC-Debug-2"
+    ]
+  },
+  "ExpandedNodes": [
+    ""
+  ],
+  "PreviewInSolutionExplorer": false
+}
